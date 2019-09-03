@@ -29,6 +29,7 @@ syn match taskpaperListItem	/^\t*-\s\+/
 syn match taskpaperContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
 syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
 syn match taskpaperCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
+syn match taskpaperTodo		/^.*\s@todo\(\(\s\|([^)]*)\).*\)\?$/
 
 syn sync fromstart
 
@@ -36,6 +37,7 @@ syn sync fromstart
 HiLink taskpaperListItem      Identifier
 HiLink taskpaperContext       Identifier
 HiLink taskpaperProject       Title
+HiLink taskpaperTodo          Todo
 HiLink taskpaperDone          NonText
 HiLink taskpaperCancelled     NonText
 HiLink taskpaperComment       Comment

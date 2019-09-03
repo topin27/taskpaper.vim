@@ -77,6 +77,10 @@ if !exists("no_plugin_maps") && !exists("no_taskpaper_maps")
     \       :call taskpaper#toggle_tag('cancelled', taskpaper#date())<CR>
     nnoremap <silent> <buffer> <Plug>TaskPaperToggleDone
     \       :call taskpaper#toggle_tag('done', taskpaper#date())<CR>
+    nnoremap <silent> <buffer> <Plug>TaskPaperToggleStart
+    \       :call taskpaper#toggle_tag('start', taskpaper#date())<CR>
+    nnoremap <silent> <buffer> <Plug>TaskPaperToggleTodo
+    \       :call taskpaper#toggle_tag('todo', '')<CR>
     nnoremap <silent> <buffer> <Plug>TaskPaperToggleToday
     \       :call taskpaper#toggle_tag('today', '')<CR>
     nnoremap <silent> <buffer> <Plug>TaskPaperMoveToProject
@@ -87,24 +91,24 @@ if !exists("no_plugin_maps") && !exists("no_taskpaper_maps")
     inoremap <silent> <buffer> <Plug>TaskPaperNewline
     \       <CR><C-r>=taskpaper#newline()<CR>
 
-    nmap <buffer> <Leader>tp <Plug>TaskPaperFoldProjects
-    nmap <buffer> <Leader>t. <Plug>TaskPaperFoldNotes
-    nmap <buffer> <Leader>tP <Plug>TaskPaperFocusProject
+    " nmap <buffer> <Leader>tp <Plug>TaskPaperFoldProjects
+    " nmap <buffer> <Leader>t. <Plug>TaskPaperFoldNotes
+    " nmap <buffer> <Leader>tP <Plug>TaskPaperFocusProject
 
-    nmap <buffer> <Leader>t/ <Plug>TaskPaperSearchKeyword
-    nmap <buffer> <Leader>ts <Plug>TaskPaperSearchTag
+    " nmap <buffer> <Leader>t/ <Plug>TaskPaperSearchKeyword
+    " nmap <buffer> <Leader>ts <Plug>TaskPaperSearchTag
 
-    nmap <buffer> <Leader>tg <Plug>TaskPaperGoToProject
-    nmap <buffer> <Leader>tj <Plug>TaskPaperNextProject
-    nmap <buffer> <Leader>tk <Plug>TaskPaperPreviousProject
+    " nmap <buffer> <Leader>tg <Plug>TaskPaperGoToProject
+    " nmap <buffer> <Leader>tj <Plug>TaskPaperNextProject
+    " nmap <buffer> <Leader>tk <Plug>TaskPaperPreviousProject
 
-    nmap <buffer> <Leader>tD <Plug>TaskPaperArchiveDone
-    nmap <buffer> <Leader>tT <Plug>TaskPaperShowToday
-    nmap <buffer> <Leader>tX <Plug>TaskPaperShowCancelled
-    nmap <buffer> <Leader>td <Plug>TaskPaperToggleDone
-    nmap <buffer> <Leader>tt <Plug>TaskPaperToggleToday
-    nmap <buffer> <Leader>tx <Plug>TaskPaperToggleCancelled
-    nmap <buffer> <Leader>tm <Plug>TaskPaperMoveToProject
+    " nmap <buffer> <Leader>tD <Plug>TaskPaperArchiveDone
+    " nmap <buffer> <Leader>tT <Plug>TaskPaperShowToday
+    " nmap <buffer> <Leader>tX <Plug>TaskPaperShowCancelled
+    " nmap <buffer> <Leader>td <Plug>TaskPaperToggleDone
+    " nmap <buffer> <Leader>tt <Plug>TaskPaperToggleToday
+    " nmap <buffer> <Leader>tx <Plug>TaskPaperToggleCancelled
+    " nmap <buffer> <Leader>tm <Plug>TaskPaperMoveToProject
 
     if mapcheck("o", "n") == ''
         nmap <buffer> o <Plug>TaskPaperNewline

@@ -1,3 +1,13 @@
+taskpaper
+========
+
+Here is a fork version of taskpaper.vim, the differences with original are:
+
+1. no default key map defined, so you can use `LocalLeader` or `Leader` to define your own key map;
+2. add `start`, `todo` tags support
+
+--------
+
 taskpaper.txt   For Vim version 6.0     Last change: 2012 March 13
 
 David O'Callaghan <david.ocallaghan@cs.tcd.ie>

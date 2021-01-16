@@ -27,19 +27,19 @@ syn match taskpaperComment	/^.*$/ contains=taskpaperContext
 syn match taskpaperProject	/^.\+:\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)*$/ contains=taskpaperContext
 syn match taskpaperListItem	/^\t*-\s\+/
 syn match taskpaperContext	/\s\zs@[^ \t(]\+\(([^)]*)\)\?/
-syn match taskpaperDone		/^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/
-syn match taskpaperCancelled	/^.*\s@cancelled\(\(\s\|([^)]*)\).*\)\?$/
-syn match taskpaperTodo		/^.*\s@todo\(\(\s\|([^)]*)\).*\)\?$/
+syn match taskpaperDone		/@done\(([^)]*)\)\?/
+syn match taskpaperCancelled	/@cancelled\(([^)]*)\)\?/
+syn match taskpaperTodo		/@todo\(([^)]*)\)\?/
 
 syn sync fromstart
 
 "highlighting for Taskpaper groups
 HiLink taskpaperListItem      Identifier
-HiLink taskpaperContext       Identifier
+HiLink taskpaperContext       Comment
 HiLink taskpaperProject       Title
 HiLink taskpaperTodo          Todo
 HiLink taskpaperDone          NonText
-HiLink taskpaperCancelled     NonText
+HiLink taskpaperCancelled     String
 HiLink taskpaperComment       Comment
 
 call taskpaper#tag_style_dict(g:task_paper_styles)
